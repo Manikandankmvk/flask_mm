@@ -34,7 +34,6 @@ class Hello(View):
                     response_data['message'] ='Created Successfully'
                     return Response(response_data['message'], status=200, mimetype='application/json')
                 except:
-                    abort(400)
                     response_data['message'] = 'Heroname already exists'
                     response_data['status'] = 400
                     return Response(response_data['message'], status=400, mimetype='application/json')
